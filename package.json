@@ -1,0 +1,19 @@
+{
+  "name": "tailwindcss-html-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "SonLam",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run build:css",
+    "build:css": "postcss src/tailwind/tailwind.css -o src/styles/main.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.7.6"
+  }
+}
