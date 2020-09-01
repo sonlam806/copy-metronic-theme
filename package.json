@@ -1,18 +1,21 @@
 {
-  "name": "tailwindcss-html-boilerplate",
+  "name": "clone_metronic_dashboard_theme",
   "version": "1.0.0",
   "main": "index.js",
   "author": "SonLam",
   "license": "MIT",
   "scripts": {
     "start": "npm run build:css",
-    "build:css": "postcss src/tailwind/tailwind.css -o src/styles/main.css"
+    "build:css": "postcss src/tailwind/tailwind.css -o src/styles/main.css",
+    "watch:scss": "gulp scss"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.1",
     "tailwindcss": "^1.7.6"
   }
