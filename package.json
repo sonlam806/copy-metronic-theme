@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm run build:css",
     "build:css": "postcss src/tailwind/tailwind.css -o src/styles/main.css",
-    "watch:scss": "gulp scss"
+    "watch:scss": "gulp sass:watch"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

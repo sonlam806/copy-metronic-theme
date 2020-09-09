@@ -1,0 +1,8 @@
+@import './config/variables';
+@import './base/reset';
+@import './base/typography';
+@import './config/mixins';
+
+
+// Components 
+@import './component/aside_menu.scss';

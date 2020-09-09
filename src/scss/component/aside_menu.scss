@@ -1,0 +1,135 @@
+.brand {
+  height: 65px;
+  background-color: $aside-menu-primary-color;
+  padding: 9px 25px;
+  cursor: pointer;
+
+  h1 {
+    color: $text-primary-color;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  i {
+    font-size: 1.4rem;
+    color: $aside-menu-menu-text-color;
+    transition: $icon-transition;
+
+    &:hover {
+      color: $aside-menu-hover-icon-color;
+    }
+  }
+}
+
+.sidebar {
+  width: 265px;
+  height: 100%;
+  background: $aside-menu-secondary-color;
+  position: absolute;
+  -webkit-transition: $icon-transition;
+  -moz-transition: $icon-transition;
+  -o-transition: $icon-transition;
+  -ms-transition: $icon-transition;
+  transition: $icon-transition;
+  z-index: 100;
+}
+
+.sidebar #leftside-navigation ul,
+.sidebar #leftside-navigation ul ul {
+  margin: -2px 0 0;
+  padding: 0;
+}
+
+.sidebar #leftside-navigation ul li {
+  list-style-type: none;
+}
+
+.sidebar #leftside-navigation ul li.active>a {
+  color: $text-primary-color;
+  background-color: $menu-item-active-color;
+
+  >i:nth-of-type(1) {
+    color: $aside-menu-hover-icon-color;
+  }
+}
+
+// .sidebar #leftside-navigation ul li.active ul {}
+
+.sidebar #leftside-navigation ul li a {
+  color: $aside-menu-menu-text-color;
+  background-color: $aside-menu-secondary-color;
+  padding: 10px 25px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  outline: 0;
+  -webkit-transition: $icon-transition;
+  -moz-transition: $icon-transition;
+  -o-transition: $icon-transition;
+  -ms-transition: $icon-transition;
+  transition: $icon-transition;
+
+  >i:nth-of-type(1) {
+    margin-right: 8px;
+    font-size: 16px;
+    flex-basis: 10%;
+  }
+
+  >span {
+    flex-basis: 80%;
+  }
+
+  >i:nth-of-type(2) {
+    font-size: 14px;
+  }
+}
+
+.sidebar #leftside-navigation ul li a:hover {
+  background-color: $menu-item-hover-color;
+  color: $text-primary-color;
+
+  >i:nth-of-type(1) {
+    color: $aside-menu-hover-icon-color;
+  }
+}
+
+.sidebar #leftside-navigation ul li a span {
+  display: inline-block;
+}
+
+.sidebar #leftside-navigation ul li a i {
+  width: 20px;
+}
+
+// .sidebar #leftside-navigation ul ul {
+//   display: none;
+// }
+
+.sidebar #leftside-navigation ul ul li {
+  background: $aside-menu-primary-color;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: none;
+}
+
+.sidebar #leftside-navigation ul ul li a {
+  font-size: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: $aside-menu-menu-text-color;
+  padding-left: 2rem;
+}
+
+/* Accordion menu style */
+.sidebar #leftside-navigation ul ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* List Icon Style */
+.fas.fa-minus {
+  font-size: 12px !important;
+}

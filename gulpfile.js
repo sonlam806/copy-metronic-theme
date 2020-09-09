@@ -8,24 +8,24 @@ sass.compiler = require('node-sass');
 const css = function () {
   return (
     gulp
-      .src('src/tailwind/tailwind.css')
-      // ...
-      .pipe(
-        postcss([
-          // ...
-          require('tailwindcss'),
-          require('autoprefixer'),
-          // ...
-        ])
-      )
-      // ...
-      .pipe(rename('main.css'))
-      .pipe(gulp.dest('src/styles'))
+    .src('src/tailwind/tailwind.css')
+    // ...
+    .pipe(
+      postcss([
+        // ...
+        require('tailwindcss'),
+        require('autoprefixer'),
+        // ...
+      ])
+    )
+    // ...
+    .pipe(rename('main.css'))
+    .pipe(gulp.dest('src/styles'))
   );
 };
 
 const scss = function () {
-  gulp
+  return gulp
     .src('src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('custom_style.css'))
@@ -37,5 +37,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./scss/**/*.scss', [scss, css]);
+  gulp.watch('src/scss/**/*.scss', scss);
 });
